@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="cordova-vr-player"
+    id="google-vr-plugin"
     version="1.2.0">
-    <name>Cordova VR Player</name>
+    <name>Google VR Plugin</name>
     <description></description>
-    <license>MIT</license>
     <keywords></keywords>
     
-    <dependency id="cordova-plugin-cocoapod-support" url="https://github.com/Aerex/cordova-plugin-cocoapods-support/"/>
+    <dependency id="cordova-plugin-cocoapod-support" url="https://github.com/blakgeek/cordova-plugin-cocoapods-support/"/>
 
     <!-- android -->
     <platform name="android">
@@ -59,8 +58,12 @@
         <source-file src="src/ios/GoogleVRPlayer.m" />
         <header-file src="src/ios/VideoPlayerViewController.h" />
         <source-file src="src/ios/VideoPlayerViewController.m" />
+        <header-file src="src/ios/PanoramaViewController.h" />
+        <source-file src="src/ios/PanoramaViewController.m" />
+        <resource-file src="src/ios/Panorama.storyboard"  />
         <resource-file src="src/ios/Main.storyboard"  />
+        <resource-file src="src/ios/andes.jpg"/>
         
-        <pod id="GVRSDK" version="1.0.1" />
+        <pod id="GVRSDK" version="1.40.0" />
     </platform>
 </plugin>

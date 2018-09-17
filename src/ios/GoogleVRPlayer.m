@@ -25,4 +25,19 @@
     
 }
 
+- (void)playImage:(CDVInvokedUrlCommand *)command {
+    NSString * imageUrl = [command.arguments objectAtIndex:0];
+    // Set the hasPendingOperation field to prevent the webview from crashing
+    self.hasPendingOperation = YES;
+    
+    // Launch the storyboard
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Panorama" bundle:nil];
+    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"panoramaBoardId"];
+    
+    [vc setValue:imageUrl forKey:@"imageUrl"];
+    
+    [self.viewController presentViewController:vc animated:YES completion:NULL];
+    
+}
+
 @end

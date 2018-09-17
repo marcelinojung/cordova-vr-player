@@ -8,7 +8,9 @@
 @property (unsafe_unretained, nonatomic) IBOutlet GVRVideoView *videoView;
 @end
 
-@implementation VideoPlayerViewController
+@implementation VideoPlayerViewController {
+    BOOL _isPaused;
+}
 
 - (instancetype)init {
     self = [super initWithNibName:nil bundle:nil];
@@ -24,20 +26,20 @@
     _videoView.enableTouchTracking = YES;
     _videoView.displayMode = kGVRWidgetDisplayModeFullscreen;
     
-    self.fallbackVideoPlayed = NO;
+    _isPaused = YES;
     
     NSString *videoPath  =  [self valueForKey:@"videoUrl"];
-    
     NSURL *videoUrl  = [NSURL URLWithString:videoPath];
-    
-    [_videoView loadFromUrl:videoUrl
-                     ofType:kGVRVideoTypeMono];
+    [_videoView loadFromUrl:videoUrl ofType:kGVRVideoTypeMono];
+
 }
 
 #pragma mark - GVRVideoViewDelegate
 
 - (void)widgetView:(GVRWidgetView *)widgetView didLoadContent:(id)content {
     NSLog(@"Finished loading video");
+    [_videoView play];
+    _isPaused = NO;
 }
 
 - (void)widgetView:(GVRWidgetView *)widgetView
@@ -75,7 +77,7 @@ didFailToLoadContent:(id)content
     // Loop the video when it reaches the end.
     if (position == videoView.duration) {
         [_videoView seekTo:0];
-        [_videoView resume];
+        [_videoView play];
     }
 }
 

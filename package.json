@@ -1,8 +1,8 @@
 {
-  "name": "cordova-vr-player",
-  "version": "1.2.0",
+  "name": "google-vr-plugin",
+  "version": "1.0.10",
   "cordova": {
-    "id": "cordova-vr-player",
+    "id": "google-vr-plugin",
     "platforms": [
       "android",
       "ios"
@@ -15,5 +15,5 @@
     "cordova-ios",
     "cordova-windows"
   ],
-  "description": "Plugin allowing to play a video in VR View"
+  "description": "Display 360 images and videos from ionic apps"
 }
