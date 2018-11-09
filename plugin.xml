@@ -7,7 +7,7 @@
     <description></description>
     <keywords></keywords>
     
-    <dependency id="cordova-plugin-cocoapod-support" url="https://github.com/OliverOng1995/cordova-plugin-cocoapods-support.git"/>
+    <dependency id="cordova-plugin-cocoapod-support" url="https://github.com/OliverOng1995/cordova-plugin-cocoapods-support/"/>
     
     <!-- android -->
     <platform name="android">
