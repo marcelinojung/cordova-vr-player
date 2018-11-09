@@ -15,8 +15,6 @@
     "cordova-ios",
     "cordova-windows"
   ],
-  "dependencies": {
-        "lodash": "^4.17.11",
-    },
+ 
   "description": "Display 360 images and videos from ionic apps"
 }
