@@ -8,7 +8,7 @@
     <keywords></keywords>
     
     <dependency id="cordova-plugin-cocoapod-support" url="https://github.com/blakgeek/cordova-plugin-cocoapods-support/"/>
-    <dependency id="lodash" url="https://github.com/lodash/lodash"/>
+    
     <!-- android -->
     <platform name="android">
       <js-module src="www/plugin.js" name="plugin">
