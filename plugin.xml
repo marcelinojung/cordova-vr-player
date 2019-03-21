@@ -64,6 +64,6 @@
         <resource-file src="src/ios/Main.storyboard"  />
         <resource-file src="src/ios/andes.jpg"/>
         
-        <pod id="GVRSDK" version="1.150.0" />
+        <pod id="GVRSDK" version="1.170.0" />
     </platform>
 </plugin>
