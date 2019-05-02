@@ -52,11 +52,6 @@ public class VrVideoActivity extends Activity {
     setContentView(resources.getIdentifier("main_layout", "layout", package_name));
 
     loadVideoStatus = LOAD_VIDEO_STATUS_UNKNOWN;
-
-    // Activity가 실행 될 때 항상 화면을 켜짐으로 유지
-    getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-    ...
-    }
    
     // Bind input and output objects for the view.
     videoWidgetView = (VrVideoView) findViewById(resources.getIdentifier("video_view", "id", package_name));
